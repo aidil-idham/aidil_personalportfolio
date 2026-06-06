@@ -1,92 +1,50 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import TimeLineElement from "../components/cv/TimeLine.astro";
+import TimeLineElement from "../components/cv/TimeLineElement.astro";
 ---
 
-<BaseLayout title="Resume" sideBarActiveItemID="cv">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
+<BaseLayout title="Academic Journey" sideBarActiveItemID="cv">
+  <div class="mt-5 mb-4">
+    <div class="text-4xl font-bold">Academic History</div>
+    <div class="h-1 w-20 bg-primary mt-2 rounded"></div>
   </div>
 
-  <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <div class="py-4 prose max-w-none text-base-content/80 text-lg">
+    <p>A comprehensive timeline of my academic milestones, institutional foundations, and core technical competencies.</p>
   </div>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
-  </div>
-
-  <div class="time-line-container grid gap-4 mb-10">
+  <!-- Timeline Interface Components -->
+  <div class="time-line-container grid gap-4 mb-10 mt-4">
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
-  </div>
-
-  <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Bachelor of Computer Science (Artificial Intelligence)"
+      subtitle="2024 - Present | Universiti Teknikal Malaysia Melaka (UTeM)"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <div class="text-base text-base-content/70 mt-1">
+        Currently studying under the <b>Faculty of Artificial Intelligence and Cyber Security (FAIX)</b>. 
+        Focusing on data mapping structures, core algorithmic programming logic, relational query optimizations, 
+        and analyzing Human-Computer Interaction interface paradigms.
+      </div>
     </TimeLineElement>
+    
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Secondary and Pre-University Stream"
+      subtitle="Graduated"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <div class="text-base text-base-content/70 mt-1">
+        Developed foundational analytical skills in mathematics, structural logic, and scientific computation templates 
+        prior to pursuing specialized computing degrees.
+      </div>
     </TimeLineElement>
   </div>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
+  <!-- Domain Modules Grid Section -->
+  <div>
+    <div class="text-2xl font-bold mb-4 text-primary">Core Relevant Modules Completed</div>
+    <div class="flex flex-wrap gap-3 mb-10">
+      <div class="badge badge-lg bg-base-200 border-base-300 p-4 font-medium text-sm">Human-Computer Interaction</div>
+      <div class="badge badge-lg bg-base-200 border-base-300 p-4 font-medium text-sm">Database Systems & SQL Normalization</div>
+      <div class="badge badge-lg bg-base-200 border-base-300 p-4 font-medium text-sm">Object-Oriented Programming (C++)</div>
+      <div class="badge badge-lg bg-base-200 border-base-300 p-4 font-medium text-sm">Knowledge-Based Expert Systems</div>
+    </div>
   </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
-  </div>
-
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-  </ul>
 </BaseLayout>
