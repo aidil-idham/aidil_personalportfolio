@@ -1,35 +1,68 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
 <BaseLayout title="Projects Gallery" sideBarActiveItemID="projects">
-  <div class="mt-5 mb-4">
-    <h1 class="text-4xl font-bold">Work Produced & Systems Engineering</h1>
+  <div class="mt-5 mb-6">
+    <h1 class="text-4xl font-bold tracking-tight">Work Produced & Systems Engineering</h1>
     <div class="h-1 w-20 bg-primary mt-2 rounded"></div>
   </div>
 
-  <div class="py-4 prose max-w-none text-base-content/80 text-lg">
-    <p>A directory showcasing standalone system architectures, programmatic tools, and logical applications engineered throughout my academic tenure[cite: 1].</p>
+  <div class="py-2 prose max-w-none text-base-content/80 text-base mb-6">
+    <p>Explore full architectural breakdowns and core production codes for application engines engineered during my academic runtime.</p>
   </div>
 
-  <!-- Project Entry 1 -->
-  <HorizontalCard
-    title="TrimTime Barber Shop Appointment System"
-    img="/post_img.webp"
-    desc="A comprehensive console application designed to manage operational workflows. Features multi-module execution tracking, structural data inputs, and database records synchronization built on a C++ core backend engine paired with a relational MySQL database."
-    url="/project-deepdive"
-    badge="FEATURED CASE STUDY"
-  />
+  <!-- Interactive Project Cards Matrix -->
+  <div class="space-y-6">
+    
+    <!-- Project Entry 1: TrimTime -->
+    <div class="card md:card-side bg-base-200 border border-base-300 shadow-sm overflow-hidden transition-all duration-300 hover:scale-[1.01] hover:shadow-md hover:border-primary/40 group">
+      <div class="p-8 flex flex-col justify-between flex-1">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="badge badge-primary font-mono text-xs font-semibold py-2 px-3">FEATURED SYSTEM</span>
+            <span class="text-xs opacity-60 font-mono">C++ / MySQL Integration</span>
+          </div>
+          <h2 class="card-title text-2xl font-bold mb-3 group-hover:text-primary transition-colors">TrimTime Barber Shop Appointment System</h2>
+          <p class="text-base-content/75 text-base leading-relaxed mb-4">
+            A comprehensive terminal system architecture designed to handle real-time organizational schedules. Implements structural schema validation, concurrent worker timeline shifts, and direct relational database synchronization via SQL runtime execution rules.
+          </p>
+        </div>
+        <div class="card-actions justify-between items-center mt-4">
+          <div class="flex flex-wrap gap-1.5">
+            <span class="badge badge-sm badge-outline opacity-70">Backend Logic</span>
+            <span class="badge badge-sm badge-outline opacity-70">Relational Mapping</span>
+          </div>
+          <a href="/project-deepdive" class="btn btn-sm btn-primary normal-case gap-2 transition-all duration-300 group-hover:translate-x-1">
+            Explore Deep Dive Case Study
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
-  <div class="divider my-4"></div>
+    <!-- Project Entry 2: KBS Expert Advisor -->
+    <div class="card md:card-side bg-base-200 border border-base-300 shadow-sm overflow-hidden transition-all duration-300 hover:scale-[1.01] hover:shadow-md hover:border-secondary/40 group">
+      <div class="p-8 flex flex-col justify-between flex-1">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="badge badge-secondary font-mono text-xs font-semibold py-2 px-3">KNOWLEDGE BASE</span>
+            <span class="text-xs opacity-60 font-mono">CLIPS Runtime Engine</span>
+          </div>
+          <h2 class="card-title text-2xl font-bold mb-3 group-hover:text-secondary transition-colors">Intelligent Career Path Advisor</h2>
+          <p class="text-base-content/75 text-base leading-relaxed mb-4">
+            An expert production rules engine engineered using logic strings inside the CLIPS runtime framework. Translates human query variables and qualification metrics into discrete consultative inference trees to guide prospective students into proper computing fields.
+          </p>
+        </div>
+        <div class="card-actions justify-between items-center mt-4">
+          <div class="flex flex-wrap gap-1.5">
+            <span class="badge badge-sm badge-outline opacity-70">Inference Rules</span>
+            <span class="badge badge-sm badge-outline opacity-70">Decision Trees</span>
+          </div>
+          <span class="text-xs opacity-50 font-mono italic">Academic Repository Asset</span>
+        </div>
+      </div>
+    </div>
 
-  <!-- Project Entry 2 -->
-  <HorizontalCard
-    title="Intelligent Career Path Advisor"
-    img="/post_img.webp"
-    desc="A knowledge-based expert consultation system engineered inside the CLIPS runtime environment. Translates structural rule sets and qualification criteria into dynamic advice streams to assist prospective students navigating computing careers."
-    url="#"
-    badge="KBS PROJECT"
-  />
+  </div>
 </BaseLayout>
