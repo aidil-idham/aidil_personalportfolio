@@ -1,0 +1,71 @@
+```astro
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Personal Qualities" sideBarActiveItemID="about">
+  <div class="pb-12 mt-5">
+    <div class="text-4xl font-bold mb-4">Personal Qualities & Core Traits</div>
+    <div class="h-1 w-20 bg-primary mb-6 rounded"></div>
+    
+    <div class="prose max-w-none mb-8 text-base-content/80 text-lg leading-relaxed">
+      <p>
+        As a Computer Science student specializing in Artificial Intelligence, I approach 
+        software engineering with an analytical mindset, strict attention to logical structure, 
+        and a passion for data-driven problem solving. I thrive in collaborative environments 
+        and continuously align my technical workflows with Human-Computer Interaction (HCI) best practices.
+      </p>
+    </div>
+
+    <!-- HCI Grid Layout for Information Organisation -->
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="card bg-base-200 p-6 rounded-xl border border-base-300 shadow-sm">
+        <h2 class="text-2xl font-bold mb-4 text-primary">Key Personal Qualities</h2>
+        <ul class="space-y-3 text-base-content/90">
+          <li class="flex items-start gap-2">
+            <span class="text-primary font-bold">✔</span>
+            <span><b>Analytical Precision:</b> Experienced in translating business rules into clean, normalized relational database structures and functional backend logic.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-primary font-bold">✔</span>
+            <span><b>Collaborative Mindset:</b> Adept at coordinating tasks within peer group structures to successfully engineer academic systems and presentations[cite: 1].</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-primary font-bold">✔</span>
+            <span><b>Disciplined & Detail-Oriented:</b> Dedicated to maintaining consistency in visual typography, alignment grids, and user workflow designs[cite: 1].</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card bg-base-200 p-6 rounded-xl border border-base-300 shadow-sm">
+        <h2 class="text-2xl font-bold mb-4 text-secondary">Technical Domain Expertise</h2>
+        <div class="space-y-4">
+          <div>
+            <span class="font-semibold block mb-1">Programming & Systems:</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge badge-outline">C++ Development</span>
+              <span class="badge badge-outline">Java Programming</span>
+              <span class="badge badge-outline">CLIPS Expert Systems</span>
+            </div>
+          </div>
+          <div>
+            <span class="font-semibold block mb-1">Data Architecture & Analytics:</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge badge-outline">Relational SQL Databases</span>
+              <span class="badge badge-outline">Advanced Microsoft Excel</span>
+              <span class="badge badge-outline">Power BI Dashboards</span>
+            </div>
+          </div>
+          <div>
+            <span class="font-semibold block mb-1">Interface Engineering:</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge badge-outline">Tailwind CSS</span>
+              <span class="badge badge-outline">Astro Framework</span>
+              <span class="badge badge-outline">HCI Design Principles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
