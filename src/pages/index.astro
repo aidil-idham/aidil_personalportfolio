@@ -4,47 +4,71 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1 text-base-content/80">Hello World, I am</div>
-    <div class="text-5xl font-bold text-primary">Aidil Idham Bin Iduros</div>
-    <div class="text-3xl py-3 font-semibold text-base-content/70">
-      Computer Science (Artificial Intelligence) Student
-    </div>
-    <div class="py-2">
-      <p class="text-lg leading-relaxed">
-        Welcome to my digital portfolio. I am an undergraduate student specializing in 
-        Artificial Intelligence at the <b>Faculty of Artificial Intelligence and Cyber Security (FAIX), UTeM</b>. 
-        This platform showcases my engineering workflows, systems development projects, academic 
-        milestones, and human-computer interaction designs.
+  <!-- Interactive Glassmorphism Hero Section -->
+  <div class="card bg-base-200 border border-base-300/60 shadow-xl overflow-hidden relative group p-8 md:p-12 my-6 transition-all duration-500 hover:shadow-primary/5">
+    <div class="absolute -inset-y-0 -right-16 w-32 bg-primary/10 blur-3xl rounded-full transition-all duration-500 group-hover:bg-primary/20 group-hover:scale-150 pointer-events-none"></div>
+    
+    <div class="relative z-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="relative flex h-3 w-3">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-success"></span>
+        </span>
+        <span class="text-xs font-mono tracking-widest uppercase opacity-70">Available for Analytics & Engineering Collaborations</span>
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-2">
+        Hi, I'm <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Aidil Idham</span>
+      </h1>
+      <p class="text-xl font-medium text-base-content/80 mb-6">
+        Artificial Intelligence Undergraduate at UTeM
       </p>
-    </div>
-    <div class="mt-8 flex gap-4">
-      <a class="btn btn-primary" href="/projects"> View My Work </a>
-      <a href="/contact" class="btn btn-outline"> Let's Connect </a>
+      
+      <div class="flex flex-wrap gap-2 mb-8">
+        <span class="badge badge-md bg-base-300 border-none font-mono py-3 px-4">SQL Data Mapping</span>
+        <span class="badge badge-md bg-base-300 border-none font-mono py-3 px-4">C++ & Java Core</span>
+        <span class="badge badge-md bg-base-300 border-none font-mono py-3 px-4">Expert Rules Systems</span>
+      </div>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="/projects" class="btn btn-primary px-6 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-primary/20 normal-case">
+          View Systems Gallery
+        </a>
+        <a href="/contact" class="btn btn-outline px-6 transition-all duration-300 hover:scale-105 normal-case">
+          Let's Connect
+        </a>
+      </div>
     </div>
   </div>
 
-  <!-- Featured Projects Section Layout -->
-  <div class="mt-4 mb-6">
-    <div class="text-3xl w-full font-bold">Featured Creations {"</>"}</div>
-    <div class="h-1 w-20 bg-primary mt-2 rounded"></div>
-  </div>
+  <!-- Interactive Quick-Navigation Grid -->
+  <div class="mt-12">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl font-bold tracking-tight">Portfolio Hub Directory</h2>
+      <div class="h-[1px] flex-grow bg-base-300 ml-4"></div>
+    </div>
 
-  <HorizontalCard
-    title="TrimTime Barber Shop Appointment System"
-    img="/post_img.webp"
-    desc="A console application built to optimize business operations. Implements user-interface workflows, normalizes data mapping, and tracks service transaction records using a C++ runtime engine coupled with a relational MySQL database."
-    url="/project-deepdive"
-    badge="FEATURED"
-  />
-  
-  <div class="divider my-2"></div>
-  
-  <HorizontalCard
-    title="Intelligent Career Path Advisor"
-    img="/post_img.webp"
-    desc="A knowledge-based expert consultation system developed utilizing the CLIPS environment. It translates complex educational logic paths into programmatic rules to assist prospective students in selecting computing paths."
-    url="/projects"
-    badge="KBS"
-  />
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Card 1 -->
+      <a href="/about" class="group bg-base-200 border border-base-300 p-6 rounded-xl transition-all duration-300 hover:scale-[1.03] hover:border-primary hover:shadow-md">
+        <div class="text-primary text-2xl mb-2 group-hover:animate-pulse">⚡</div>
+        <h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Personal Qualities</h3>
+        <p class="text-sm text-base-content/70 leading-relaxed">Core professional traits, logical frameworks, and my technical skillset matrix.</p>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="/cv" class="group bg-base-200 border border-base-300 p-6 rounded-xl transition-all duration-300 hover:scale-[1.03] hover:border-secondary hover:shadow-md">
+        <div class="text-secondary text-2xl mb-2 group-hover:animate-pulse">🎓</div>
+        <h3 class="font-bold text-lg mb-1 group-hover:text-secondary transition-colors">Academic History</h3>
+        <p class="text-sm text-base-content/70 leading-relaxed">Interactive semester breakdown, completed computing modules, and performance trackers.</p>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="/project-deepdive" class="group bg-base-200 border border-base-300 p-6 rounded-xl transition-all duration-300 hover:scale-[1.03] hover:border-accent hover:shadow-md sm:col-span-2 lg:col-span-1">
+        <div class="text-accent text-2xl mb-2 group-hover:animate-pulse">🔬</div>
+        <h3 class="font-bold text-lg mb-1 group-hover:text-accent transition-colors">Case Study Deep Dive</h3>
+        <p class="text-sm text-base-content/70 leading-relaxed">Detailed architecture walkthrough and video demonstration of my featured systems.</p>
+      </a>
+    </div>
+  </div>
 </BaseLayout>
