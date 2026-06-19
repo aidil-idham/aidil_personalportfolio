@@ -3,39 +3,56 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
-import { ViewTransitions } from "astro:transitions";
 
-import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API } from "../config";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
-const {
-  image,
-  title = SITE_TITLE,
-  description = SITE_DESCRIPTION,
-  includeSidebar = true,
-  sideBarActiveItemID,
-  ogType,
-} = Astro.props;
+const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSidebar = true, sideBarActiveItemID } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en" data-theme="corporate">
+<!DOCTYPE html>
+<html lang="en" data-theme="corporate" class="scroll-smooth">
   <head>
-    <BaseHead title={title} description={description} image={image} , ogType={ogType} />
-    {TRANSITION_API && <ViewTransitions />}
+    <BaseHead title={title} description={description} image={image} />
   </head>
-  <body>
-    <div class="bg-base-100 drawer lg:drawer-open">
+  <body class="bg-base-100 text-base-content min-h-screen relative antialiased selection:bg-primary/20 selection:text-primary">
+    
+    <div class="fixed inset-0 w-full h-full -z-50 pointer-events-none overflow-hidden bg-base-100">
+      <video 
+        autoplay 
+        loop 
+        muted 
+        playsinline 
+        preload="auto"
+        class="w-full h-full object-cover opacity-[0.06] mix-blend-multiply filter contrast-125 brightness-95 transition-opacity duration-1000"
+      >
+        <source src="/bg-network.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-tr from-base-100 via-transparent to-primary/5 pointer-events-none"></div>
+    </div>
+
+    <div class="bg-transparent drawer lg:drawer-open">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content bg-base-100">
+      <div class="drawer-content flex flex-col bg-transparent">
         <Header title={SITE_TITLE} />
-        <div class="md:flex md:justify-center">
-          <main class="p-6 pt-10 lg:max-w-[900px] max-w-[100vw]">
+        <div class="md:flex md:justify-center flex-grow">
+          <main class="p-6 pt-10 lg:pt-14 max-w-[900px] w-full flex-grow orchestrator-fade-in">
             <slot />
           </main>
         </div>
         <Footer />
       </div>
-      {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
+      {includeSidebar && <SideBar id={sideBarActiveItemID} />}
     </div>
   </body>
 </html>
+
+<style is:global>
+  /* Smooth App Entry Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .orchestrator-fade-in {
+    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+</style>
