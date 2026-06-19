@@ -16,7 +16,6 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
   </head>
   <body class="bg-base-100 text-base-content min-h-screen relative antialiased selection:bg-primary/20 selection:text-primary">
     
-    <!-- LOOPING BACKGROUND VIDEO HOUSING -->
     <div class="fixed inset-0 w-full h-full -z-50 pointer-events-none overflow-hidden bg-base-100">
       <video 
         autoplay 
@@ -31,14 +30,12 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
       <div class="absolute inset-0 bg-gradient-to-tr from-base-100 via-transparent to-primary/5 pointer-events-none"></div>
     </div>
 
-    <!-- MAIN INTERACTIVE DRAWER WRAPPER -->
     <div class="bg-transparent drawer lg:drawer-open">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content flex flex-col bg-transparent">
         <Header title={SITE_TITLE} />
         <div class="md:flex md:justify-center flex-grow px-4 sm:px-6">
           
-          <!-- UPDATED PREMIUM GLASSMORPHISM MAIN CARD -->
           <main class="p-6 pt-10 lg:p-12 max-w-[900px] w-full flex-grow orchestrator-fade-in bg-base-100/75 backdrop-blur-md border border-base-content/10 shadow-xl rounded-2xl my-6 transition-all duration-300">
             <slot />
           </main>
@@ -59,5 +56,21 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
   }
   .orchestrator-fade-in {
     animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Premium Minimalist Scrollbar Design */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.3);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.5);
   }
 </style>
