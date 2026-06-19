@@ -4,23 +4,52 @@ import TimeLineElement from "../components/cv/TimeLineElement.astro";
 ---
 
 <BaseLayout title="Academic Journey" sideBarActiveItemID="cv">
+  <!-- Page Header -->
   <div class="mt-5 mb-4">
-    <div class="text-4xl font-bold">Academic History</div>
+    <div class="text-4xl font-bold tracking-tight">Academic History</div>
     <div class="h-1 w-20 bg-primary mt-2 rounded"></div>
   </div>
 
-  <div class="py-4 prose max-w-none text-base-content/80 text-lg">
+  <div class="py-4 prose max-w-none text-base-content/80 text-base">
     <p>A comprehensive timeline of my academic milestones, institutional foundations, and core technical competencies.</p>
   </div>
 
+  <!-- ACADEMIC PERFORMANCE METRIC DASHBOARD -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10 mt-2">
+    <div class="bg-base-200/60 backdrop-blur-sm border border-base-300 p-4 rounded-xl text-center shadow-sm hover:border-primary/30 transition-all duration-300">
+      <div class="text-[10px] font-mono font-bold uppercase tracking-wider opacity-50 mb-1">Semester 1 GPA</div>
+      <div class="text-2xl font-black text-primary">3.51</div>
+    </div>
+    
+    <div class="bg-base-200/60 backdrop-blur-sm border border-base-300 p-4 rounded-xl text-center shadow-sm hover:border-base-content/20 transition-all duration-300">
+      <div class="text-[10px] font-mono font-bold uppercase tracking-wider opacity-50 mb-1">Semester 2 GPA</div>
+      <div class="text-2xl font-black text-base-content/60">2.95</div>
+    </div>
+    
+    <div class="bg-base-200/60 backdrop-blur-sm border border-base-300 p-4 rounded-xl text-center shadow-sm hover:border-secondary/30 transition-all duration-300">
+      <div class="text-[10px] font-mono font-bold uppercase tracking-wider opacity-50 mb-1">Semester 3 GPA</div>
+      <div class="text-2xl font-black text-secondary">3.58</div>
+    </div>
+    
+    <div class="bg-primary/10 backdrop-blur-sm border border-primary/20 p-4 rounded-xl text-center shadow-sm hover:scale-[1.02] transition-all duration-300">
+      <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-primary font-bold mb-1">Current CGPA</div>
+      <div class="text-2xl font-black text-primary">3.34</div>
+    </div>
+  </div>
+
   <!-- Timeline Interface Components -->
-  <div class="time-line-container grid gap-4 mb-10 mt-4">
+  <div class="text-2xl font-bold mb-6 text-base-content/90 flex items-center gap-2">
+    <span>Institutional Milestones</span>
+    <div class="h-[1px] flex-grow bg-base-300 ml-2"></div>
+  </div>
+
+  <div class="time-line-container grid gap-6 mb-12">
     <TimeLineElement
       title="Bachelor of Computer Science (Artificial Intelligence)"
       subtitle="2024 - Present | Universiti Teknikal Malaysia Melaka (UTeM)"
     >
-      <div class="text-base text-base-content/70 mt-1">
-        Currently studying under the <b>Faculty of Artificial Intelligence and Cyber Security (FAIX)</b>. 
+      <div class="text-base text-base-content/70 mt-2 leading-relaxed">
+        Currently studying under the <span class="font-semibold text-base-content/90">Faculty of Artificial Intelligence and Cyber Security (FAIX)</span>. 
         Focusing on data mapping structures, core algorithmic programming logic, relational query optimizations, 
         and analyzing Human-Computer Interaction interface paradigms.
       </div>
@@ -30,7 +59,7 @@ import TimeLineElement from "../components/cv/TimeLineElement.astro";
       title="Secondary and Pre-University Stream"
       subtitle="Graduated"
     >
-      <div class="text-base text-base-content/70 mt-1">
+      <div class="text-base text-base-content/70 mt-2 leading-relaxed">
         Developed foundational analytical skills in mathematics, structural logic, and scientific computation templates 
         prior to pursuing specialized computing degrees.
       </div>
@@ -38,13 +67,30 @@ import TimeLineElement from "../components/cv/TimeLineElement.astro";
   </div>
 
   <!-- Domain Modules Grid Section -->
-  <div>
+  <div class="mt-8">
     <div class="text-2xl font-bold mb-4 text-primary">Core Relevant Modules Completed</div>
-    <div class="flex flex-wrap gap-3 mb-10">
-      <div class="badge badge-lg bg-base-200 border-base-300 p-4 font-medium text-sm">Human-Computer Interaction</div>
-      <div class="badge badge-lg bg-base-200 border-base-300 p-4 font-medium text-sm">Database Systems & SQL Normalization</div>
-      <div class="badge badge-lg bg-base-200 border-base-300 p-4 font-medium text-sm">Object-Oriented Programming (C++)</div>
-      <div class="badge badge-lg bg-base-200 border-base-300 p-4 font-medium text-sm">Knowledge-Based Expert Systems</div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+      
+      <div class="flex items-center gap-3 bg-base-200/50 border border-base-300/70 p-3.5 rounded-xl shadow-sm hover:border-primary/30 transition-colors duration-300">
+        <div class="p-2 bg-primary/10 text-primary rounded-lg text-xs font-mono font-bold">HCI</div>
+        <span class="font-medium text-sm text-base-content/80">Human-Computer Interaction</span>
+      </div>
+
+      <div class="flex items-center gap-3 bg-base-200/50 border border-base-300/70 p-3.5 rounded-xl shadow-sm hover:border-primary/30 transition-colors duration-300">
+        <div class="p-2 bg-primary/10 text-primary rounded-lg text-xs font-mono font-bold">SQL</div>
+        <span class="font-medium text-sm text-base-content/80">Database Systems &amp; SQL Normalization</span>
+      </div>
+
+      <div class="flex items-center gap-3 bg-base-200/50 border border-base-300/70 p-3.5 rounded-xl shadow-sm hover:border-primary/30 transition-colors duration-300">
+        <div class="p-2 bg-primary/10 text-primary rounded-lg text-xs font-mono font-bold">C++</div>
+        <span class="font-medium text-sm text-base-content/80">Object-Oriented Programming (C++)</span>
+      </div>
+
+      <div class="flex items-center gap-3 bg-base-200/50 border border-base-300/70 p-3.5 rounded-xl shadow-sm hover:border-primary/30 transition-colors duration-300">
+        <div class="p-2 bg-primary/10 text-primary rounded-lg text-xs font-mono font-bold">KBS</div>
+        <span class="font-medium text-sm text-base-content/80">Knowledge-Based Expert Systems</span>
+      </div>
+
     </div>
   </div>
 </BaseLayout>
